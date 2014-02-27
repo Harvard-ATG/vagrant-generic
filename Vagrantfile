@@ -49,6 +49,9 @@ Vagrant.configure('2') do |config|
       'Owner'       => ENV['USER'],
       'Provisioner' => 'vagrant-aws'
     }
+
+    # Sync the html file folder
+    config.vm.synced_folder "html/", "/var/www/html", create: true
   end
 
   # Install librarian-puppet and use it to download Puppet modules

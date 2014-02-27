@@ -13,5 +13,7 @@ node default {
     default_vhost => true,
     keepalive     => true,
   }
+
+  include apache::mod::php
 }
 # vim: set ft=puppet ts=2 sw=2 ei:
